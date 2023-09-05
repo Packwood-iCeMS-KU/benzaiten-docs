@@ -1,0 +1,53 @@
+site_name: Benzaiten Cluster Documentation
+nav: 
+  - Overview: 'index.md'
+  - Documentation:
+    - 'Accessing the Cluster': 'accessing_the_cluster.md'
+    - 'Basic Commands': 'basic_commands.md'
+    - 'Storage and Quotas': 'storage.md'
+    - 'Using Partitions': 'partitions.md'
+    - 'Running Jobs': 'running_jobs.md'
+    - 'Parallel Processing': 'parallel_processing.md'
+    - 'Managing Jobs': 'managing_jobs.md'
+    - 'Connecting to SoLAR (VUW High Capacity Storage)': 'solar_vuw.md'
+    - 'Connecting to Cloud Providers': 'cloud_providers.md'
+    - 'Using Containers': 'containers.md'
+    - 'Using Jupyter Notebooks': 'notebooks.md'
+    - 'Examples': 'examples.md' 
+    - 'User Submitted Docs': 'usersub.md'
+    - 'FAQ': 'faq.md'
+    - 'HPC Hardware Layout': 'hpclayout.md'
+    - Support: support.md
+
+
+theme: readthedocs
+markdown_extensions:
+  - toc:
+      permalink: True
+      baselevel: 1
+      toc_depth: 3
+  - footnotes
+  - pymdownx.superfences:
+      # make exceptions to highlighting of code:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
+  - codehilite
+  - attr_list
+  - md_in_html
+  - neoteroi.cards
+
+plugins:
+  - search
+  - include-markdown
+  - mermaid2
+
+extra_css: 
+  - extra.css
+  - css/neoteroi-mkdocs.css
+
+extra_javascript:
+  - https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js
+
+site_url: https://icems-research-computing.github.io/benzaiten-docs/
